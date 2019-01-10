@@ -28,16 +28,16 @@ After this our approach has 2 aspects.
 1. User Interface				
 2. Backend Statistical Analysis
 ## User Interface :
-Using the venue id from the **explore** feature of the Foursquare API we write another URL that uses the **venue id** to get the information about the venues. Using the **venues** feature of the Foursquare API we get the **Ratings** of the hotels that is necessary for the User Interface. Using columns excluding ***'Neighborhood Latitude','Neighborhood Longitude','Venue Id','Venue Latitude','Venue Longitude','Venue Category'*** from the **manhattan_hotels** dataframe and ***'Rating'*** column from the **manhattan_hotels_data** dataframe we create the user interface for the Manhattan Hotel data called user_sees. Like below :
-|Neighbourhood|Hotel Name	|Distance	|Rating|
-|:-----------:|:---------:|:-------:|:----:|
+Using the venue id from the **explore** feature of the Foursquare API we write another URL that uses the **venue id** to get the information about the venues. Using the **venues** feature of the Foursquare API we get the **Ratings** of the hotels that is necessary for the User Interface. Using columns excluding ***'Neighborhood Latitude','Neighborhood Longitude','Venue Id','Venue Latitude','Venue Longitude','Venue Category'*** from the **manhattan_hotels** dataframe and ***'Rating'*** column from the **manhattan_hotels_data** dataframe we create the user interface for the Manhattan Hotel data called user_sees. Like below :				
+|Neighbourhood|Hotel Name	|Distance	|Rating|					
+|-----------:|:---------:|:-------:|:----|					
 |Chinatown	  |Hotel 50 Bowery NYC|	214m |8.9|
 |Chinatown	  |Crosby Street Hotel|	866m |9.3|
 |Manhattanville|	Aloft Harlem    |	1003m|8.1|
 
-We do the same for the Staten Island borough. Here we use the columns ***Neighborhood, Venue Name, Venue Distance*** from the **staten_hotels** dataframe and rename them as ***'Neighborhood','Hotel Name','Distance'***. We also include the column ***Rating*** from the **staten_hotel_data** dataframe and we create the dataframe for the user inteface.
-|Neighbourhood|Hotel Name	|Distance	|Rating|
-|:-----------:|:---------:|:-------:|:----:|
+We do the same for the Staten Island borough. Here we use the columns ***Neighborhood, Venue Name, Venue Distance*** from the **staten_hotels** dataframe and rename them as ***'Neighborhood','Hotel Name','Distance'***. We also include the column ***Rating*** from the **staten_hotel_data** dataframe and we create the dataframe for the user inteface.					
+|Neighbourhood|Hotel Name	|Distance	|Rating|				
+|-----------:|:---------:|:-------:|:----|				
 |Rosebank     |Staten Island Motor Lodge|	954m|	Not Rated yet|
 |Travis	      |Staten Island New York Hotel |	55m|	Not Rated yet|
 |Travis	      |Comfort Inn|	46m     |	4.8 |
@@ -68,4 +68,4 @@ Since the rating of other hotels in the Staten Island borough is not that good w
 On the other hand there are many options in Manhattan and the hotels are rated highly. The number of likes in most of the hotels are more than the hotels in Staten Island.
 
 # Conclusion :
-We have gone through a process of accessing data from the Foursquare API to create our dataframe so that we can show the necessary data to the users of our app. All they need to know is the **Name of the Neighbourhood, Name of the hotel, Rating, Distance from your current location**. Other information that we have collected are used for our own analysis. We have used the venue id for using the **Venues** feature of the Foursquare API. Then we got the Rating, Number of Likes, Dislike Flag, Number of tips etc. Since none of the hotels were disliked that column was not used for clustering. Other three columns were used for clustering. Since clustering was used for grouping similarly featured hotels distinguished them. We also learnt from the foursquare data that Manhattan has more and better options than there is in Staten Island. 
+We have gone through a process of accessing data from the Foursquare API to create our dataframe so that we can show the necessary data to the users of our app. All they need to know is the **Name of the Neighbourhood, Name of the hotel, Rating, Distance from your current location**. Other information that we have collected are used for our own analysis. We have used the venue id for using the **Venues** feature of the Foursquare API. Then we got the Rating, Number of Likes, Dislike Flag, Number of tips etc. Since none of the hotels were disliked that column was not used for clustering. Other three columns were used for clustering. Since clustering was used for grouping similarly featured hotels distinguished them. We also learnt from the foursquare data that Manhattan has more and better options than there is in Staten Island.
